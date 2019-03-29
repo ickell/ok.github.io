@@ -1,0 +1,97 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #121212;
+    color: #e6e6e6
+}
+
+body {
+    line-height: 1;
+    font-family :'나눔고딕', 'Malgun Gothic', sans-serif;
+}
+
+a {
+    color: #e6e6e6;
+    text-decoration: none
+}
+a:hover {
+    color: #aaa
+}
+
+#header {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 10px;
+    line-height: 40px;
+    border-top: 5px solid #282828;
+    border-bottom: 5px solid #282828;
+    font-size: 20px
+}
+
+#header .header-item {
+    flex-grow: 1.1
+}
+
+#header .header-item.center {
+    flex-grow: 0
+}
+
+#header .header-item.right {
+    text-align: right
+}
+
+#header .header-item.center a {
+    margin: 0 5px;
+    padding: 0 5px
+}
+
+#header .header-item.right {
+    text-align: right
+}
+
+img {
+    max-width: 100%;
+}
+
+#banner {
+    padding: 100px 0;
+}
+
+#banner img {
+    display: block;
+    margin: auto
+}
+
+#wrapper {
+    display: flex;
+    width: 80%;
+    margin : auto;
+    padding: 100px 0;
+}
+
+#wrapper .about-me {
+    margin: auto;
+}
+
+.draft-service {
+    line-height: 50px;
+}
+
+#service-outline p{
+    line-height: 1.8;
+    text-align: center;
+    font-style : normal;
+}
+
+#service-outline header{
+    text-align: center;
+    font-size: 36px;
+    margin : 70px auto;
+    font-style: bold;
+}
+
+#service-outline a {
+    font-style : italic
+}
