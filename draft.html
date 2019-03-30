@@ -3,13 +3,27 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>서비스 초안</title>
     <style>
+        *{
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent
+        }
+
         body {
             margin: 0;
             padding: 0;
+            background: #121212;
+            color: #e6e6e6
+        }
+
+        select {
+            border:0;
+            outline: 0;
             background: #121212;
             color: #e6e6e6
         }
@@ -30,15 +44,27 @@
             margin: 2% auto;
             border: 1px solid #e6e6e6;
             border-radius: 15px;
+            overflow: hidden;
         }
 
         #translater .box p {
-            width: 100%;
             height: 330px;
         }
 
+        #translater .box textarea {
+            width:100;
+            height: 330px;
+            outline:0;
+            background: #121212;
+            color: #e6e6e6;
+            border:0;
+            padding: 10px;
+            font-size: 1.3rem;
+            resize: none
+        }
+
         #translater p {
-            margin : 30px 30px;
+            margin: 30px;
         }
 
         .button {
@@ -46,9 +72,11 @@
             font-size: 30px;
             margin: 5px 30px;
         }
+
         i {
-            margin : 0 2px;
+            margin: 0 2px;
         }
+
         .selecter {
             margin: 0 30px;
             line-height: 50px;
@@ -59,7 +87,7 @@
 <body>
     <div id="translater">
         <div class="input box">
-            <p>이곳에 입력합니다</p>
+            <textarea placeholder="이곳에 입력합니다"></textarea>
         </div>
         <div class="output-1 box">
             <div class="selecter">
@@ -92,11 +120,11 @@
                         <option value="Google">구글</option>
                     </select>
                     <select name="language">
-                            <option value="Korean">한국어</option>
-                            <option value="English">영어</option>
-                            <option value="Japaness">일본어</option>
-                            <option value="chiness">중국어</option>
-                        </select>
+                        <option value="Korean">한국어</option>
+                        <option value="English">영어</option>
+                        <option value="Japaness">일본어</option>
+                        <option value="chiness">중국어</option>
+                    </select>
                 </form>
             </div>
             <p>두번째 번역 결과</p>
@@ -114,11 +142,11 @@
                         <option value="Google">구글</option>
                     </select>
                     <select name="language">
-                            <option value="Korean">한국어</option>
-                            <option value="English">영어</option>
-                            <option value="Japaness">일본어</option>
-                            <option value="chiness">중국어</option>
-                        </select>
+                        <option value="Korean">한국어</option>
+                        <option value="English">영어</option>
+                        <option value="Japaness">일본어</option>
+                        <option value="chiness">중국어</option>
+                    </select>
                 </form>
             </div>
             <p>세번째 번역 결과</p>

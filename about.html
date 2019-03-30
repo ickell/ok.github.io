@@ -3,11 +3,14 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./style.css">
     <title>nekodev</title>
 </head>
 
 <body>
+    <input type="checkbox" id="nav-opener">
     <div id="banner">
         <a href="./main.html"><img src="./banner.png" alt="banner"></a>
     </div>
@@ -17,17 +20,27 @@
         </div>
 
         <div class="header-item center">
-            <a href="./about.html">About</a>
-            <a href="./projects.html">Projects</a>
+            <a class="activated">About</a>
             <a href="./assignments.html">Assignments</a>
             <a href="./likelion.html">likelion</a>
         </div>
 
         <div class="header-item right">
             <a href="https://github.com/Seonggyu-Kim" target="_blank">Github</a>
+            <label for="nav-opener" class="openbtn">
+                <div id="openbtn-top"></div>
+                <div id="openbtn-mid"></div>
+                <div id="openbtn-bot"></div>
+            </label>
         </div>
     </header>
 
+    <nav id="nav">
+        <a class="activated">About</a>
+        <a href="./assignments.html">Assignments</a>
+        <a href="./likelion.html">likelion</a>
+        <a href="https://github.com/Seonggyu-Kim" target="_blank">Github</a>
+    </nav>
     <div id="wrapper">
         <div class="about-me">
             <p>명지대학교 컴퓨터공학과 재학중</p>

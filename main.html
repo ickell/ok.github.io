@@ -3,30 +3,44 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./style.css">
     <title>nekodev</title>
 </head>
 
 <body>
+    <input type="checkbox" id="nav-opener">
     <div id="banner">
         <a href="./main.html"><img src="./banner.png" alt="banner"></a>
     </div>
     <header id="header">
         <div class="header-item">
-            <a href="./main.html">nekodev</a>
+            <a class="activated">nekodev</a>
         </div>
 
         <div class="header-item center">
-        <a href="./about.html">About</a>
-        <a href="./projects.html">Projects</a>
-        <a href="./assignments.html">Assignments</a>
-        <a href="./likelion.html">likelion</a>
+            <a href="./about.html">About</a>
+            <a href="./assignments.html">Assignments</a>
+            <a href="./likelion.html">likelion</a>
         </div>
 
         <div class="header-item right">
             <a href="https://github.com/Seonggyu-Kim" target="_blank">Github</a>
+            <label for="nav-opener" class="openbtn">
+                <div id="openbtn-top"></div>
+                <div id="openbtn-mid"></div>
+                <div id="openbtn-bot"></div>
+            </label>
         </div>
     </header>
+
+    <nav id="nav">
+        <a href="./about.html">About</a>
+        <a href="./assignments.html">Assignments</a>
+        <a href="./likelion.html">likelion</a>
+        <a href="https://github.com/Seonggyu-Kim" target="_blank">Github</a>
+    </nav>
 
     <div id="wrapper">
         <p style="margin : auto">열심히 만들어 보고 있습니다.. 만들고 싶은 서비스는 likelion 탭에 있습니다.</p>

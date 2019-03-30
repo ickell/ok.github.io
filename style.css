@@ -1,3 +1,19 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+*, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent
+}
+
+::selection {
+    background: #eee;
+    color: #000
+}
+
+::-moz-selection {
+    background: #eee;
+    color: #000
+}
 
 html, body {
     margin: 0;
@@ -8,26 +24,41 @@ html, body {
 
 body {
     line-height: 1;
-    font-family :'나눔고딕', 'Malgun Gothic', sans-serif;
+    font-family: 'Malgun Gothic', sans-serif;
 }
 
 a {
     color: #e6e6e6;
     text-decoration: none
 }
+
 a:hover {
     color: #aaa
 }
 
+a.activated {
+    color: #6b6b84
+}
+
+img {
+    max-width: 100%;
+}
+
+/* header */
+
 #header {
     display: flex;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
     width: 80%;
     margin: 0 auto;
-    padding: 40px 10px;
+    padding: 10px;
     line-height: 40px;
+    background: #121212;
     border-top: 5px solid #282828;
     border-bottom: 5px solid #282828;
-    font-size: 20px
+    font-size: 1.1rem
 }
 
 #header .header-item {
@@ -39,7 +70,8 @@ a:hover {
 }
 
 #header .header-item.right {
-    text-align: right
+    display: flex;
+    justify-content: flex-end
 }
 
 #header .header-item.center a {
@@ -51,23 +83,129 @@ a:hover {
     text-align: right
 }
 
-img {
-    max-width: 100%;
+#nav-opener, .openbtn {
+    display: none
 }
+
+.openbtn {
+    position: absolute;
+    right: 0;
+    margin: 11px 0;
+    cursor: pointer;
+    transition: right .5s
+}
+
+.openbtn div {
+    width: 25px;
+    height: 4px;
+    border-radius: 5px;
+    background: #fff;
+    transition: transform .5s, opacity .5s, -webkit-transform .5s
+}
+
+.openbtn #openbtn-mid {
+    margin: 4px 0;
+}
+
+#nav-opener:checked~#header .openbtn {
+    position: absolute;
+    right: calc(190px - 10%)
+}
+
+#nav-opener:checked~#header .openbtn #openbtn-top {
+    -webkit-transform: translateY(4px) rotate(-135deg);
+    transform: translateY(4px) rotate(-135deg);
+}
+
+#nav-opener:checked~#header .openbtn #openbtn-mid {
+    opacity: 0;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+#nav-opener:checked~#header .openbtn #openbtn-bot {
+    -webkit-transform: translateY(-12px) rotate(-45deg);
+    transform: translateY(-12px) rotate(-45deg);
+}
+
+@media screen and (max-width:820px) {
+    #header {
+        width: 90%
+    }
+    #header .header-item.center, #header .header-item.right>a {
+        display: none
+    }
+    #header .header-item.right {
+        position: relative
+    }
+    .openbtn {
+        display: block
+    }
+}
+
+/* nav */
+
+#nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100%;
+    padding: 30px 10px;
+    background: #282828;
+    transition: right .5s
+}
+
+#nav-opener:checked~#nav {
+    right: 0
+}
+
+#nav a {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(100, 100, 100, .5);
+    transition: padding-left .5s
+}
+
+#nav a:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0
+}
+
+#nav a:not(.activated):hover {
+    padding-left: 5px
+}
+
+@media screen and (max-width:820px) {
+    #nav {
+        display: block
+    }
+}
+
+/* banner */
 
 #banner {
     padding: 100px 0;
+    text-align: center
 }
 
-#banner img {
-    display: block;
-    margin: auto
+#banner a {
+    display: inline-block;
 }
+
+#banner a img {
+    display: block;
+}
+
+/* wrapper */
 
 #wrapper {
-    display: flex;
     width: 80%;
-    margin : auto;
+    margin: auto;
     padding: 100px 0;
 }
 
@@ -79,19 +217,21 @@ img {
     line-height: 50px;
 }
 
-#service-outline p{
+/* service-outline */
+
+#service-outline #wrapper p {
     line-height: 1.8;
     text-align: center;
-    font-style : normal;
+    font-style: normal;
 }
 
-#service-outline header{
+#service-outline #wrapper h1 {
     text-align: center;
     font-size: 36px;
-    margin : 70px auto;
+    margin: 70px auto;
     font-style: bold;
 }
 
-#service-outline a {
-    font-style : italic
+#service-outline #wrapper a {
+    font-style: italic
 }
