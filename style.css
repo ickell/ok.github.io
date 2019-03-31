@@ -55,10 +55,11 @@ img {
     margin: 0 auto;
     padding: 10px;
     line-height: 40px;
-    background: #121212;
+    background: rgba(18, 18, 18, .95);
     border-top: 5px solid #282828;
     border-bottom: 5px solid #282828;
-    font-size: 1.1rem
+    font-size: 1.1rem;
+    z-index: 100;
 }
 
 #header .header-item {
@@ -112,6 +113,16 @@ img {
     right: calc(190px - 10%)
 }
 
+#nav-opener:checked~#header .openbtn::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5)
+}
+
 #nav-opener:checked~#header .openbtn #openbtn-top {
     -webkit-transform: translateY(4px) rotate(-135deg);
     transform: translateY(4px) rotate(-135deg);
@@ -154,7 +165,8 @@ img {
     height: 100%;
     padding: 30px 10px;
     background: #282828;
-    transition: right .5s
+    transition: right .5s;
+    z-index: 100;
 }
 
 #nav-opener:checked~#nav {
@@ -207,6 +219,11 @@ img {
     width: 80%;
     margin: auto;
     padding: 100px 0;
+    text-align: center
+}
+
+#wrapper>p {
+    margin: 100px auto 20px auto
 }
 
 #wrapper .about-me {
@@ -215,6 +232,37 @@ img {
 
 .draft-service {
     line-height: 50px;
+}
+
+#wrapper .bg {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed
+}
+
+#wrapper .bg.first {
+    background-image: url(./resource/bg1.jpg);
+}
+
+#wrapper .bg.second {
+    background-image: url(./resource/bg2.jpg);
+}
+
+#wrapper .bg.third {
+    background-image: url(./resource/bg3.jpg);
+}
+
+#wrapper .bg.forth {
+    background-image: url(./resource/bg4.jpg);
+}
+
+#wrapper .text {
+    padding: 100px 30px;
+    font-weight: bold;
+    font-size: 23px
 }
 
 /* service-outline */
@@ -234,4 +282,376 @@ img {
 
 #service-outline #wrapper a {
     font-style: italic
+}
+
+#service-outline #wrapper img {
+    margin: 50px 0
+}
+
+/* assignments */
+
+.as-item {
+    display: flex;
+    height: 171px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #111;
+    transition: .5s
+}
+
+.as-item:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+    height: 170px;
+}
+
+.as-item:hover {
+    background: #aaa;
+    color: #000
+}
+
+.as-item .thumb {
+    flex-shrink: 0
+}
+
+.as-item .thumb img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.as-item .details .title {
+    font-size: 25px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    overflow: hidden;
+}
+
+.as-item .details .desc {
+    font-size: 16px;
+    line-height: 20px;
+    max-height: 60px;
+    text-align: left;
+    overflow: hidden;
+}
+
+/* footer */
+
+#footer {
+    background: #282828;
+    margin-top: 100px;
+    padding: 10px 30px;
+}
+
+#footer #footer-video {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: -110px auto 30px auto;
+    object-fit: cover;
+    pointer-events: none
+}
+
+#footer>div {
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    text-align: center
+}
+
+#footer>div:last-child {
+    margin-bottom: 0
+}
+
+#footer a {
+    margin: 0 3px;
+}
+
+/* about */
+
+@keyframes p5 {
+    from {
+        width: 0
+    }
+    to {
+        width: 5%
+    }
+}
+
+@keyframes p10 {
+    from {
+        width: 0
+    }
+    to {
+        width: 10%
+    }
+}
+
+@keyframes p25 {
+    from {
+        width: 0
+    }
+    to {
+        width: 25%
+    }
+}
+
+@keyframes p30 {
+    from {
+        width: 0
+    }
+    to {
+        width: 30%
+    }
+}
+
+@keyframes p40 {
+    from {
+        width: 0
+    }
+    to {
+        width: 40%
+    }
+}
+
+@keyframes p45 {
+    from {
+        width: 0
+    }
+    to {
+        width: 45%
+    }
+}
+
+@keyframes p100 {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+#about .percent-indicator {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    left: 25px;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100%-50px);
+    margin: auto;
+    padding: 50px 20px
+}
+
+#about .lang-wrapper {
+    position: relative;
+    padding: 25px;
+    border: 1px solid #aaa;
+    max-width: 800px;
+    margin: auto;
+}
+
+#about .percent-indicator div {
+    position: relative;
+    width: 0;
+    border-left: 1px dashed #aaa;
+    margin-left: -1px;
+}
+
+#about .percent-indicator .p-0 {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px)
+}
+
+#about .percent-indicator div::before, #about .percent-indicator div::after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #121212;
+    padding-bottom: 5px;
+    font-size: 16px;
+    line-height: 16px
+}
+
+#about .percent-indicator div::after {
+    top: 21px
+}
+
+#about .percent-indicator .p-0::before {
+    content: '0%'
+}
+
+#about .percent-indicator .p-20::before {
+    content: '20%'
+}
+
+#about .percent-indicator .p-40::before {
+    content: '40%'
+}
+
+#about .percent-indicator .p-60::before {
+    content: '60%'
+}
+
+#about .percent-indicator .p-80::before {
+    content: '80%'
+}
+
+#about .percent-indicator .p-100::before {
+    content: '100%'
+}
+
+#about .percent-indicator .p-0::after {
+    content: 'Bronze'
+}
+
+#about .percent-indicator .p-20::after {
+    content: 'Silver'
+}
+
+#about .percent-indicator .p-40::after {
+    content: 'Gold'
+}
+
+#about .percent-indicator .p-60::after {
+    content: 'Platinum'
+}
+
+#about .percent-indicator .p-80::after {
+    content: 'Diamond'
+}
+
+#about .percent-indicator .p-100::after {
+    content: 'Challenger'
+}
+
+#about .lang-wrapper h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -15px;
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    font-size: 30px;
+    line-height: 30px;
+    background: #121212
+}
+
+#about .language {
+    position: relative;
+    margin: 100px auto;
+    padding: 0 20px;
+    list-style: none;
+    z-index: 2
+}
+
+#about li {
+    margin-bottom: 5px;
+    padding: 10px 5px;
+    color: #fff;
+    text-align: left
+}
+
+#about li.c {
+    width: 40%;
+    background: #aaa;
+    animation: p40 .8s;
+}
+
+#about li.html {
+    width: 45%;
+    background: #aaa;
+    animation: p45 .9s;
+}
+
+#about li.css {
+    width: 30%;
+    background: #aaa;
+    animation: p30 .6s;
+}
+
+#about li.python {
+    width: 15%;
+    background: #aaa;
+    animation: p15 .3s;
+}
+
+#about li.django {
+    width: 5%;
+    background: #aaa;
+    animation: p5 .1s;
+}
+
+#about li.korean {
+    width: 100%;
+    background: linear-gradient(to right, red, blue);
+    animation: p100 2s;
+}
+
+#about li::before, #about li:hover::after {
+    display: none
+}
+
+#about li::after, #about li:hover::before {
+    display: block
+}
+
+#about li.c::after {
+    content: "C"
+}
+
+#about li.html::after {
+    content: "HTML"
+}
+
+#about li.css::after {
+    content: "CSS"
+}
+
+#about li.python::after {
+    content: "PYTHON"
+}
+
+#about li.django::after {
+    content: "django"
+}
+
+#about li.korean::after {
+    content: "Korean"
+}
+
+#about li.c::before {
+    content: "40%"
+}
+
+#about li.html::before {
+    content: "45%"
+}
+
+#about li.css::before {
+    content: "30%"
+}
+
+#about li.python::before {
+    content: "15%"
+}
+
+#about li.django::before {
+    content: "5%"
+}
+
+#about li.korean::before {
+    content: "100%"
+}
+
+@media screen and (max-width:640px) {
+    #about .percent-indicator div::after {
+        display: none
+    }
 }

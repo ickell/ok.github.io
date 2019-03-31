@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>test</title>
+
+    <style>
+        .flex {
+            width: 500px;
+            margin: 0 auto
+        }
+
+        .a {
+            top: 0;
+            display: flex;
+            width: 500px;
+            /* 너비와 위치를 지정해야 맛이 안감 */
+            position: fixed;  
+            line-height: 30px;
+            padding: 0 10px;
+            border-bottom: 1px solid #aaa;
+            background: white
+        }
+
+        .a a::before {
+            line-height: 30px
+        }
+
+        .a .right {
+            margin-left: auto
+        }
+
+        .right a {
+            margin: 0 10px
+        }
+
+        .b {
+            display: flex;
+            line-height: 24px;
+            padding: 0 10px
+        }
+
+        .b .fa-ellipsis-h {
+            margin-left: auto;
+            margin-top: 3px
+        }
+
+        .b .name {
+            margin: 0 5px
+        }
+
+        .border {
+            border-left: 1px solid #aaa;
+            height: 20px;
+            margin: 5px 15px
+        }
+
+        .nav-icon {
+            width: 30px
+        }
+
+        .c, .d {
+            display: flex
+        }
+
+        .sibal {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 50%
+        }
+
+        .d a {
+            margin: 0 5px
+        }
+
+        .d .fa-bookmark {
+            margin-left: auto
+        }
+
+        .comment {
+            display: flex
+
+        }
+
+        .comment .name {
+            flex-shrink: 0;
+            margin-right: 10px
+        }
+
+        .article>div {
+            margin-bottom: 10px
+        }
+
+        .article>div:last-child {
+            margin-bottom: 0
+        }
+
+        .article {
+            margin-top: 40px
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="flex">
+        <!--header-->
+        <div class="a">
+            <a class="fab fa-instagram"></a>
+            <div class="border"></div>
+            <div class="name">𝓘𝓷𝓼𝓽𝓪𝓰𝓻𝓪𝓶</div>
+            <div class="right">
+                <a class="far fa-compass"></a>
+                <a class="far fa-heart"></a>
+                <a class="far fa-user"></a>
+            </div>
+        </div>
+
+        <div class="article">
+            <!-- semi-profile -->
+            <div class="b">
+                <div class="name">
+                    <a class="fas fa-user-circle"></a>
+                </div>
+                <div class="name">nekodev</div>
+                <a class="fas fa-ellipsis-h"></a>
+            </div>
+
+            <!-- article -->
+            <div class="c">
+                <img src="https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_1280.jpg" alt="왜 안나오니?"
+                    class="sibal">
+            </div>
+
+            <!-- buttons -->
+            <div class="d">
+                <a class="far fa-heart like"></a>
+                <a class="far fa-comment"></a>
+                <a class="far fa-share-square"></a>
+                <a class="far fa-bookmark"></a>
+            </div>
+
+            <!-- like-stack -->
+            <div class="e">
+                좋아요 2개
+            </div>
+
+            <!-- comment -->
+            <div class="f">
+                <div class="comment">
+                    <span class="name">CSS mother</span>
+                    <span class="comment">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, dolore?</span>
+                </div>
+                <div class="comment">
+                    <span class="name">CSS mother</span>
+                    <span class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi architecto
+                        molestiae quo, commodi omnis sunt corporis labore perferendis in! Enim a, fugit in ullam iusto
+                        quia laborum magni ad sit.</span>
+                </div>
+            </div>
+
+            <!-- time -->
+            <div class="g">
+                <time>March 23, 2019, 9:53 p.m.</time>
+            </div>
+        </div>
+
+        <div class="article">
+            <!-- semi-profile -->
+            <div class="b">
+                <div class="name">
+                    <a class="fas fa-user-circle"></a>
+                </div>
+                <div class="name">Sibal</div>
+                <a class="fas fa-ellipsis-h"></a>
+            </div>
+
+            <!-- article -->
+            <div class="c">
+                <img src="https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_1280.jpg" alt="왜 안나오니?"
+                    class="sibal">
+            </div>
+
+            <!-- buttons -->
+            <div class="d">
+                <a class="far fa-heart like"></a>
+                <a class="far fa-comment"></a>
+                <a class="far fa-share-square"></a>
+                <a class="far fa-bookmark"></a>
+            </div>
+
+            <!-- like-stack -->
+            <div class="e">
+                좋아요 2개
+            </div>
+
+            <!-- comment -->
+            <div class="f">
+                <div class="comment">
+                    <span class="name">CSS mother</span>
+                    <span class="comment">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, dolore?</span>
+                </div>
+                <div class="comment">
+                    <span class="name">CSS mother</span>
+                    <span class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi architecto
+                        molestiae quo, commodi omnis sunt corporis labore perferendis in! Enim a, fugit in ullam iusto
+                        quia laborum magni ad sit.</span>
+                </div>
+            </div>
+
+            <!-- time -->
+            <div class="g">
+                <time>March 23, 2019, 9:53 p.m.</time>
+            </div>
+        </div>
+
+        <div class="article">
+            <!-- semi-profile -->
+            <div class="b">
+                <div class="name">
+                    <a class="fas fa-user-circle"></a>
+                </div>
+                <div class="name">Sibal</div>
+                <a class="fas fa-ellipsis-h"></a>
+            </div>
+
+            <!-- article -->
+            <div class="c">
+                <img src="https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_1280.jpg" alt="왜 안나오니?"
+                    class="sibal">
+            </div>
+
+            <!-- buttons -->
+            <div class="d">
+                <a class="far fa-heart like"></a>
+                <a class="far fa-comment"></a>
+                <a class="far fa-share-square"></a>
+                <a class="far fa-bookmark"></a>
+            </div>
+
+            <!-- like-stack -->
+            <div class="e">
+                좋아요 2개
+            </div>
+
+            <!-- comment -->
+            <div class="f">
+                <div class="comment">
+                    <span class="name">CSS mother</span>
+                    <span class="comment">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, dolore?</span>
+                </div>
+                <div class="comment">
+                    <span class="name">CSS mother</span>
+                    <span class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi architecto
+                        molestiae quo, commodi omnis sunt corporis labore perferendis in! Enim a, fugit in ullam iusto
+                        quia laborum magni ad sit.</span>
+                </div>
+            </div>
+
+            <!-- time -->
+            <div class="g">
+                <time>March 23, 2019, 9:53 p.m.</time>
+            </div>
+        </div>
+
+        <div class="article">
+            <!-- semi-profile -->
+            <div class="b">
+                <div class="name">
+                    <a class="fas fa-user-circle"></a>
+                </div>
+                <div class="name">Sibal</div>
+                <a class="fas fa-ellipsis-h"></a>
+            </div>
+
+            <!-- article -->
+            <div class="c">
+                <img src="https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_1280.jpg" alt="왜 안나오니?"
+                    class="sibal">
+            </div>
+
+            <!-- buttons -->
+            <div class="d">
+                <a class="far fa-heart like"></a>
+                <a class="far fa-comment"></a>
+                <a class="far fa-share-square"></a>
+                <a class="far fa-bookmark"></a>
+            </div>
+
+            <!-- like-stack -->
+            <div class="e">
+                좋아요 2개
+            </div>
+
+            <!-- comment -->
+            <div class="f">
+                <div class="comment">
+                    <span class="name">CSS mother</span>
+                    <span class="comment">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, dolore?</span>
+                </div>
+                <div class="comment">
+                    <span class="name">CSS mother</span>
+                    <span class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi architecto
+                        molestiae quo, commodi omnis sunt corporis labore perferendis in! Enim a, fugit in ullam iusto
+                        quia laborum magni ad sit.</span>
+                </div>
+            </div>
+
+            <!-- time -->
+            <div class="g">
+                <time>March 23, 2019, 9:53 p.m.</time>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
