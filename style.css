@@ -295,7 +295,7 @@ img {
     height: 171px;
     padding: 10px 20px;
     border-bottom: 1px solid #111;
-    transition: .5s
+    transition: background .5s, color .5s
 }
 
 .as-item:last-child {
@@ -387,6 +387,15 @@ img {
     }
     to {
         width: 10%
+    }
+}
+
+@keyframes p15 {
+    from {
+        width: 0
+    }
+    to {
+        width: 15%
     }
 }
 
@@ -653,5 +662,36 @@ img {
 @media screen and (max-width:640px) {
     #about .percent-indicator div::after {
         display: none
+    }
+}
+
+.details {
+    min-width: 0
+}
+
+@media screen and (max-width:820px) {
+    .as-item .thumb img {
+        width: 80px;
+        height: 80px
+    }
+    .as-item {
+        height: 101px
+    }
+    .as-item:last-child {
+        height: 100px
+    }
+    .as-item .details .title {
+        font-size: 16px;
+        white-space: normal;
+        line-height: 18px;
+        max-height: 36px;
+        margin: 0
+    }
+    .as-item .details .desc {
+        display: none
+    }
+    .as-item .details {
+        display: flex;
+        align-items: center
     }
 }
