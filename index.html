@@ -2,6 +2,7 @@
 <html lang="ko">
 
 <head>
+ 
     <meta charset="utf-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -9,27 +10,108 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="shortcut icon" href="./resource/favicon.ico">
-    <title>nekodev</title>
+
+    <title>오키나와</title>
+    <style>
+    .img{
+  width:250px; 
+  height:240px;
+  border-radius: 7px;
+}
+article{
+    font-size: 15pt;
+    color: #e6e6e6;
+    line-height: 40pt;
+}
+
+#one h1 {
+    text-align: center;
+    padding: 2em;
+}
+
+.inner {
+    max-width: 75em;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex.flex-3 article {
+    position: relative;
+    width: 28%;
+}
+
+#two {
+    margin: 3em;
+    text-align: center;
+    border-bottom: 0.5em solid #5385c1;}
+
+pre{
+  padding-left:10px;
+  font-size:14px;
+}
+.flipImage{ 
+  width:250px; 
+  height:240px; 
+  margin:10px; 
+  float:left; }
+
+.flipImage > .ImageFront{
+    position:absolute;
+    transform: perspective( 600px ) rotateY( 0deg );
+    background:#FC0; 
+  width:250px; 
+  height:230px; 
+  border-radius: 7px;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+}
+
+.flipImage > .ImageBack{
+    position:absolute;
+    transform: perspective( 600px ) rotateY( 180deg );
+    background: rgb(31, 52, 58); 
+  width:250px; 
+  height:230px; 
+  border-radius: 7px;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+}
+
+.flipImage:hover > .ImageFront{
+    transform: perspective( 600px ) rotateY( -180deg );
+}
+
+.flipImage:hover > .ImageBack{
+    transform: perspective( 600px ) rotateY( 0deg );
+}
+.clear{
+  clear:both;
+}
+
+    </style>
 </head>
 
 <body>
     <input type="checkbox" id="nav-opener">
     <div id="banner">
-        <a href="./index.html"><img src="./resource/banner.png" alt="banner"></a>
+        <h1>오키나와의 눈물</h1>
     </div>
     <header id="header">
         <div class="header-item">
-            <a class="activated">nekodev</a>
+            
         </div>
 
         <div class="header-item center">
-            <a href="./about.html">About</a>
-            <a href="./assignments.html">Assignments</a>
-            <a href="./likelion.html">likelion</a>
+            <a href=""></a>
+            <a href=""></a>
         </div>
 
         <div class="header-item right">
-            <a href="https://github.com/Seonggyu-Kim" target="_blank">Github</a>
             <label for="nav-opener" class="openbtn">
                 <div id="openbtn-top"></div>
                 <div id="openbtn-mid"></div>
@@ -38,34 +120,51 @@
         </div>
     </header>
 
-    <nav id="nav">
-        <a href="./about.html">About</a>
-        <a href="./assignments.html">Assignments</a>
-        <a href="./likelion.html">likelion</a>
-        <a href="https://github.com/Seonggyu-Kim" target="_blank">Github</a>
-    </nav>
-
+   
     <div id="wrapper">
-        <div class="text">멋쟁이 사자처럼<br><br>@<br><br>명지대학교 자연</div>
+        <div class="text">메도루마 슌 작가<br><br></div>
         <div class="bg first"></div>
-        <div class="text">이두희 대장님ㅎㅎ</div>
-        <div class="bg second"></div>
-        <div class="text">봉사활동까지..</div>
-        <div class="bg third"></div>
-        <div class="text">HACK YOUR LIFE!</div>
-        <div class="bg forth"></div>
-        <p>Special Thanks To...</p>
-        <a href="https://marshall-ku.com" target="_blank" style="text-decoration: underline">Marshall Ku</a>
-    </div>
+        <div class="text">물방울 <br><br><br><br><br>
+        <div class="flex flex-3">
+                <article>
+                     <div class="flipImage">
+                    <div class="ImageBack">
+                        <br>
+                        물방울
+                        <br><br><br><br>
+                        메도루마 슌
+                    </div>
+                    <div class="ImageFront"><img class="img" src="./resource/bookcover.jpeg" alt="Marigolds flowers - Pawan Mall" /></div>
+                </div>
+                </article>
+                <article>
+                    <header>
+                 
+                    </header>
+                    
+                    <p>오키나와인들이 겪고 있던 삶의 애환과 전쟁의 상흔으로 평생 죄의식을 그려내고 있다</p>
+                </article>
+                <article>
+                    <header>
+                        
+                    </header>
+                
+                    <p></p>
+                </article>
+            </div>
+               
+                </div>
 
-    <footer id="footer">
-        <video autoplay muted loop playsinline src="./resource/footer.mp4" id="footer-video"></video>
-        <div>nekodev</div>
-        <div>소개 및 앞으로 진행할 프로젝트를 설계하는 장소</div>
-        <div>
-            <a href="https://github.com/Seonggyu-Kim"><i class="fab fa-github"></i></a>
-            <a href="mailto:sg152485@likelion.org"><i class="far fa-envelope"></i></a>
-        </div>
+        
+        <div class="text">전쟁의 상흔<br><br><br>@<br><br>평화기념공원</div>
+        <div class="bg second"></div>
+        <div class="text">히메유리 평화기념자료관</div>
+        <div class="bg third"></div>
+        <div class="text">가데나 공군기지</div>
+        <div class="bg forth"></div>
+        <div class="text">미아코 섬</div>
+        <div class="bg fifth"></div>
+   
     </footer>
 </body>
 

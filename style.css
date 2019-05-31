@@ -240,7 +240,7 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed
+    background-attachment: fixed;
 }
 
 #wrapper .bg.first {
@@ -248,15 +248,18 @@ img {
 }
 
 #wrapper .bg.second {
-    background-image: url(./resource/bg2.jpg);
+    background-image: url(./resource/bg2.png);
 }
 
 #wrapper .bg.third {
-    background-image: url(./resource/bg3.jpg);
+    background-image: url(./resource/bg3.jpeg);
 }
 
 #wrapper .bg.forth {
-    background-image: url(./resource/bg4.jpg);
+    background-image: url(./resource/bg4.png);
+}
+#wrapper .bg.fifth {
+    background-image: url(./resource/bg5.png);
 }
 
 #wrapper .text {
